@@ -629,17 +629,16 @@ spec:
                     items:
                       properties:
                         excludeExportRanges:
-                          description: IP ranges encompassing the subnets to be excluded
-                            from peering.
+                          description: IP ranges encompassing the subnets to be excluded from peering.
                           items:
                             type: string
                           type: array
+                          immutable: true
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
                         uriRef:
-                          description: Reference to a Network in compute to populate
-                            uri.
+                          description: Reference to a Network in compute to populate uri.
                           properties:
                             name:
                               description: Name of the referenced object.
@@ -673,8 +672,7 @@ spec:
                           - name
                           type: object
                         uriSelector:
-                          description: Selector for a Network in compute to populate
-                            uri.
+                          description: Selector for a Network in compute to populate uri.
                           properties:
                             matchControllerRef:
                               description: |-
@@ -684,8 +682,7 @@ spec:
                             matchLabels:
                               additionalProperties:
                                 type: string
-                              description: MatchLabels ensures an object with matching
-                                labels is selected.
+                              description: MatchLabels ensures an object with matching labels is selected.
                               type: object
                             policy:
                               description: Policies for selection.
@@ -712,8 +709,7 @@ spec:
                                   - IfNotPresent
                                   type: string
                               type: object
-                          type: object
-                      type: object
+                          type: object    type: object
                     type: array
                   linkedVpnTunnels:
                     description: The URIs of linked VPN tunnel resources
