@@ -634,6 +634,7 @@ spec:
                           readOnly: true
                           items:
                             type: string
+                          type: array
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
