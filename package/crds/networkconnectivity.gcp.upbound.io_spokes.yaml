@@ -709,7 +709,8 @@ spec:
                                   - IfNotPresent
                                   type: string
                               type: object
-                          type: object    type: object
+                          type: object    
+                      type: object
                     type: array
                   linkedVpnTunnels:
                     description: The URIs of linked VPN tunnel resources
