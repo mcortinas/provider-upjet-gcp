@@ -296,6 +296,7 @@ spec:
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
+                          readOnly: true
                         uriRef:
                           description: Reference to a Network in compute to populate
                             uri.
@@ -630,10 +631,9 @@ spec:
                       properties:
                         excludeExportRanges:
                           description: IP ranges encompassing the subnets to be excluded from peering.
+                          readOnly: true
                           items:
                             type: string
-                          type: array
-                          readOnly: true
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
